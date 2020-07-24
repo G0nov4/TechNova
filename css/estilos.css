@@ -1,0 +1,219 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  background-color: #0b1726;
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+}
+.header .barra {
+  background-color: rgba(45, 64, 89, 0.5);
+}
+.header .barra .barra-navegacion {
+  display: flex;
+}
+.header .barra .barra-navegacion .logo {
+  display: flex;
+  width: 40%;
+  height: 80px;
+}
+.header .barra .barra-navegacion .logo img {
+  margin-top: -5px;
+  height: 100px;
+  cursor: pointer;
+}
+.header .barra .barra-navegacion .menu {
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+.header .barra .barra-navegacion .menu .enlaces {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.header .barra .barra-navegacion .menu .enlaces .enlace {
+  list-style: none;
+}
+.header .barra .barra-navegacion .menu .enlaces .enlace a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+}
+.header .barra .barra-navegacion .redes {
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
+.header .barra .barra-navegacion .redes ul {
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  list-style: none;
+  justify-content: space-between;
+}
+.header .barra .barra-navegacion .redes ul li a {
+  color: white;
+  font-size: 25px;
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+}
+.header .barra .barra-navegacion .redes ul li a:hover .fa {
+  scale: 1.2;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.2);
+}
+.header .barra .barra-navegacion .redes ul li:nth-child(1) a:hover .fa {
+  color: #4dc247;
+}
+.header .barra .barra-navegacion .redes ul li:nth-child(2) a:hover .fa {
+  color: #3b5998;
+}
+.header .barra .barra-navegacion .redes ul li:nth-child(3) a:hover .fa {
+  color: #55acee;
+}
+.header .barra .barra-navegacion .redes ul li:nth-child(4) a:hover .fa {
+  color: #fff;
+}
+.header .barra .barra-navegacion .redes ul li:nth-child(5) a:hover .fa {
+  color: #007bb5;
+}
+.header .banner {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+}
+.header .banner .img-banner {
+  position: relative;
+}
+.header .banner .img-banner .banner-1 {
+  background-image: url(../img/Banner_1.jpg);
+  animation: mianimacion 30s ease-in-out 30s infinite;
+}
+.header .banner .img-banner .banner-2 {
+  background-image: url(../img/Banner_2.jpg);
+  animation: mianimacion 35s ease-in-out 25s infinite;
+}
+.header .banner .img-banner .banner-3 {
+  background-image: url(../img/Banner_3.jpg);
+  animation: mianimacion 35s ease-in-out 20s infinite;
+}
+.header .banner .img-banner .banner-4 {
+  background-image: url(../img/Banner_4.jpg);
+  animation: mianimacion 35s ease-in-out 15s infinite;
+}
+.header .banner .img-banner .banner-5 {
+  background-image: url(../img/Banner_5.jpg);
+  animation: mianimacion 35s ease-in-out 10s infinite;
+}
+.header .banner .img-banner .banner-6 {
+  background-image: url(../img/Banner_6.jpg);
+  animation: mianimacion 35s ease-in-out 5s infinite;
+}
+.header .banner .img-banner .banner-1,
+.header .banner .img-banner .banner-2,
+.header .banner .img-banner .banner-3,
+.header .banner .img-banner .banner-4,
+.header .banner .img-banner .banner-5,
+.header .banner .img-banner .banner-6 {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-size: 100%;
+  background-attachment: fixed;
+}
+@keyframes mianimacion {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.header .banner .end-banner {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.header .container {
+  align-content: center;
+  text-align: center;
+}
+.header .container .texto-banner {
+  color: white;
+  margin-top: 10%;
+}
+.header .container .texto-banner h1 {
+  font-size: 4.5rem;
+}
+.header .container .texto-banner p {
+  font-size: 2.5rem;
+}
+.header .container .texto-banner hr {
+  margin-top: 10px;
+  color: white;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.cuerpo {
+  width: 100%;
+}
+.cuerpo .about {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+.cuerpo .about .title h1 {
+  text-align: center;
+  font-size: 3.5rem;
+  color: white;
+}
+.cuerpo .about .about-description {
+  display: flex;
+}
+.cuerpo .about .about-description img {
+  margin: 30px 50px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 3px white solid;
+  box-shadow: 0px 0px 4px white;
+}
+.cuerpo .about .about-description .description p {
+  padding: 30px;
+  color: white;
+  font-family: "Segoe UI", Tahoma, "Geneva", Verdana, sans-serif;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+}
+.cuerpo .about .about-description .description a {
+  margin: 30px;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #fcd15f;
+}
+
+/*# sourceMappingURL=estilos.css.map */
