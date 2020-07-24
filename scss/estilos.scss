@@ -224,7 +224,7 @@ body {
             display: flex;
             justify-content: space-between;
             img:hover {
-                scale: 1.2;
+                scale: 1.05;
                 transition: 1s ease-in;
             }
             img {
@@ -236,6 +236,7 @@ body {
                 border-radius: 50%;
                 border: 3px white solid;
                 box-shadow: 0px 0px 4px white;
+                transition: all .8s ease-in;
             }
             .description {
                 width: 60%;
@@ -334,7 +335,6 @@ body {
                         background-color: $color_DarkBlue;
                         color: $color_White;
                         height: 12%;
-                        width: 30%;
                         font-size: 1rem;
                         border-radius: 10px;
                         border-bottom: hidden;
@@ -344,6 +344,133 @@ body {
                     }
                 }
             }
+        }
+    }
+    .other-post {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .card {
+            display: flex;
+            flex-direction: column;
+            background-color: $color_White;
+            width: 32.5%;
+            margin-bottom: 15px;
+            border-radius: 20px;
+            position: relative;
+            top: 0;
+            transition: all .5s ease;
+            // border: 1px #afafaf solid;
+            img {
+                border-radius: 18px 18px 0px 0px;
+                width: 100%;
+            }
+            h4 {
+                text-align: center;
+                padding: 15px;
+            }
+            p {
+                text-align: center;
+                padding: 20px;
+            }
+            button {
+                margin: 10px;
+                width: 33%;
+            }
+        }
+        .card:hover {
+            scale: 1.005;
+            top: -10px;
+            box-shadow: 0 4px 5px rgba(255, 255, 255, 0.2);
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    background-color: $color_footer_Blue;
+    text-align: center;
+    padding-bottom: 15px;
+    h1 {
+        font-weight: 900;
+        color: $color_White;
+        padding-top: 20px;
+        font-size: 3rem;
+    }
+    .footer-redes {
+        width: 100%;
+        ul {
+            padding: 10px;
+            display: flex;
+            width: 15%;
+            text-decoration: none;
+            list-style: none;
+            justify-content: space-around;
+            margin-left: auto;
+            margin-right: auto;
+            li {
+                a {
+                    color: white;
+                    font-size: 25px;
+                    text-shadow: 0 0 3px rgba($color: #fff, $alpha: 0.5);
+                }
+                a:hover {
+                    .fa {
+                        scale: 1.2;
+                        text-shadow: 0 0 1px rgba($color: #fff, $alpha: 0.2);
+                    }
+                }
+            }
+            li:nth-child(1) {
+                a:hover {
+                    .fa {
+                        color: #4dc247;
+                    }
+                }
+            }
+            li:nth-child(2) {
+                a:hover {
+                    .fa {
+                        color: #3b5998;
+                    }
+                }
+            }
+            li:nth-child(3) {
+                a:hover {
+                    .fa {
+                        color: #55acee;
+                    }
+                }
+            }
+            li:nth-child(4) {
+                a:hover {
+                    .fa {
+                        color: #fff;
+                    }
+                }
+            }
+            li:nth-child(5) {
+                a:hover {
+                    .fa {
+                        color: #007bb5;
+                    }
+                }
+            }
+        }
+    }
+    .text {
+        color: $color_White;
+        width: 55%;
+        margin-left: auto;
+        margin-right: auto;
+        .frase {
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        .autor {
+            display: flex;
+            justify-content: flex-end;
         }
     }
 }
