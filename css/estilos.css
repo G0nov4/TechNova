@@ -18,79 +18,132 @@ body {
 }
 
 .header {
-  position: relative;
   height: 100vh;
 }
 .header .barra {
+  width: 100%;
   background-color: rgba(45, 64, 89, 0.5);
 }
 .header .barra .barra-navegacion {
   display: flex;
+  height: 90px;
 }
 .header .barra .barra-navegacion .logo {
   display: flex;
+  justify-content: flex-start;
   width: 40%;
-  height: 80px;
 }
 .header .barra .barra-navegacion .logo img {
-  margin-top: -5px;
-  height: 100px;
-  cursor: pointer;
+  margin-left: 20px;
+  height: 100%;
 }
-.header .barra .barra-navegacion .menu {
-  width: 40%;
+.header .barra .barra-navegacion .enlaces {
   display: flex;
   align-items: center;
-  font-family: "Merriweather Sans", sans-serif;
-}
-.header .barra .barra-navegacion .menu .enlaces {
-  width: 100%;
-  display: flex;
   justify-content: space-evenly;
-}
-.header .barra .barra-navegacion .menu .enlaces .enlace {
+  width: 40%;
   list-style: none;
 }
-.header .barra .barra-navegacion .menu .enlaces .enlace a {
-  text-decoration: none;
+.header .barra .barra-navegacion .enlaces li a {
   color: white;
-  font-size: 1.3rem;
+  font-size: 20px;
+  text-decoration: none;
 }
 .header .barra .barra-navegacion .redes {
-  width: 20%;
   display: flex;
   align-items: center;
-}
-.header .barra .barra-navegacion .redes ul {
-  display: flex;
-  width: 100%;
-  text-decoration: none;
+  justify-content: space-evenly;
+  width: 30%;
   list-style: none;
-  justify-content: space-between;
 }
-.header .barra .barra-navegacion .redes ul li a {
+.header .barra .barra-navegacion .redes li a {
   color: white;
   font-size: 25px;
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
 }
-.header .barra .barra-navegacion .redes ul li a:hover .fa {
+.header .barra .barra-navegacion .redes li a:hover .fa {
   scale: 1.2;
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
 }
-.header .barra .barra-navegacion .redes ul li:nth-child(1) a:hover .fa {
+.header .barra .barra-navegacion .redes li:nth-child(1) a:hover .fa {
   color: #4dc247;
 }
-.header .barra .barra-navegacion .redes ul li:nth-child(2) a:hover .fa {
+.header .barra .barra-navegacion .redes li:nth-child(2) a:hover .fa {
   color: #3b5998;
 }
-.header .barra .barra-navegacion .redes ul li:nth-child(3) a:hover .fa {
+.header .barra .barra-navegacion .redes li:nth-child(3) a:hover .fa {
   color: #55acee;
 }
-.header .barra .barra-navegacion .redes ul li:nth-child(4) a:hover .fa {
+.header .barra .barra-navegacion .redes li:nth-child(4) a:hover .fa {
   color: #fff;
 }
-.header .barra .barra-navegacion .redes ul li:nth-child(5) a:hover .fa {
+.header .barra .barra-navegacion .redes li:nth-child(5) a:hover .fa {
   color: #007bb5;
+}
+.header .barra .barra-navegacion .checkbtn {
+  font-size: 30px;
+  color: white;
+  display: none;
+}
+.header .barra .barra-navegacion #check {
+  display: none;
+}
+@media (max-width: 768px) {
+  .header .barra .barra-navegacion {
+    height: 70px;
+    justify-content: space-between;
+  }
+  .header .barra .barra-navegacion .checkbtn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 10;
+  }
+  .header .barra .barra-navegacion .enlaces {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    position: fixed;
+    width: 100%;
+    height: 50%;
+    background-color: #0b1726;
+    top: 0;
+    right: -100%;
+    transition: all 0.5s;
+  }
+  .header .barra .barra-navegacion .enlaces li {
+    margin-top: 50px;
+    height: 50%;
+    line-height: 30px;
+  }
+  .header .barra .barra-navegacion .enlaces li a {
+    text-decoration: none;
+    font-size: 30px;
+  }
+  .header .barra .barra-navegacion .redes {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px 150px;
+    position: fixed;
+    width: 100%;
+    height: 50%;
+    background-color: #0b1726;
+    top: 50%;
+    left: -100%;
+    transition: all 0.5s;
+  }
+  .header .barra .barra-navegacion #check:checked ~ .enlaces {
+    right: 0;
+  }
+  .header .barra .barra-navegacion #check:checked ~ .redes {
+    left: 0;
+  }
+}
+@media (max-width: 480px) {
+  .header .barra .barra-navegacion .redes {
+    padding: 20px 100px;
+  }
 }
 .header .banner {
   position: absolute;
@@ -317,6 +370,7 @@ body {
   text-align: center;
   line-height: 20px;
   height: 60%;
+  margin-bottom: -13px;
 }
 .cuerpo .ultimate-post .cards-M .card-m .card-m-description button {
   height: 12%;
