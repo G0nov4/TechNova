@@ -324,9 +324,10 @@ body {
                 padding: 15px;
             }
             p {
-                font-family: $font_description-card;
+                font-family: 'Poppins', sans-serif;
                 text-align: center;
-                padding: 20px;
+                padding: 0px 20px;
+                height: 150px;
             }
             button {
                 margin: 10px;
@@ -345,11 +346,10 @@ body {
 .footer {
     width: 100%;
     background-color: $color_footer_Blue;
-    font-family: $font_footer;
+    font-family: 'Dosis', sans-serif;
     text-align: center;
     padding-bottom: 15px;
     h1 {
-        font-weight: 900;
         color: $color_White;
         padding-top: 20px;
         font-size: 3rem;
@@ -377,11 +377,12 @@ body {
             font-weight: 700;
             letter-spacing: 2px;
             margin-bottom: 10px;
-            font-family: $font_footer;
+            font-family: 'Dosis', sans-serif;
         }
         .autor {
             display: flex;
-            justify-content: flex-end;
+            justify-content: end;
+            font-family: 'Dosis', sans-serif;
         }
     }
 }
